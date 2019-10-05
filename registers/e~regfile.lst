@@ -1,0 +1,12 @@
+>/usr/local/lib/gcc/i686-pc-linux-gnu/4.3.4/vhdl/lib//v93/ieee/
+../../../src/ieee/numeric_bit.v93
+>/usr/local/lib/gcc/i686-pc-linux-gnu/4.3.4/vhdl/lib//v93/ieee/
+../../../src/ieee/numeric_bit-body.v93
+>/usr/local/lib/gcc/i686-pc-linux-gnu/4.3.4/vhdl/lib//v93/ieee/
+../../../src/ieee/math_real.vhdl
+>/usr/local/lib/gcc/i686-pc-linux-gnu/4.3.4/vhdl/lib//v93/ieee/
+../../../src/ieee/math_real-body.vhdl
+>
+register_file.vhd
+>
+register.vhd

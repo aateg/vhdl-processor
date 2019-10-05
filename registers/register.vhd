@@ -18,7 +18,8 @@ architecture reg_arch of reg is
     --signal q_n: bit_vector(wordSize-1 downto 0);
     -- precisa do q_n ?
 begin
-    nome: process(clock, reset)
+    clkr: process(clock, reset)
+    begin
         if reset = '1' then
             q <= (others => '0');
             --q_n <= not q;
@@ -26,5 +27,5 @@ begin
             q <= d;
             --q_n <= not d;
         end if;
-    end process nome;
+    end process clkr;
 end architecture reg_arch;
