@@ -1,4 +1,0 @@
-v 3
-file . "ram.vhd" "20190914001027.000" "20190922190036.914":
-  entity ram at 1( 0) + 0 on 11;
-  architecture ram_arch of ram at 17( 410) + 0 on 12;

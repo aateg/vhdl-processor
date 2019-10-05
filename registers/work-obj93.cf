@@ -1,7 +1,0 @@
-v 3
-file . "register_file.vhd" "20190923195036.000" "20190923165141.306":
-  entity regfile at 1( 0) + 0 on 25;
-  architecture regfile_arch of regfile at 21( 576) + 0 on 26;
-file . "register.vhd" "20190922220435.000" "20190923132950.129":
-  entity reg at 1( 0) + 0 on 15;
-  architecture reg_arch of reg at 17( 421) + 0 on 16;
