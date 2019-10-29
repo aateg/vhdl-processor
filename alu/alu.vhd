@@ -29,8 +29,9 @@ architecture alu_arch of alu is
     signal set_vector: bit_vector(size-1 downto 0);
     signal j_cin: bit;
     signal z_f: bit_vector(size-1 downto 0);
+    signal zerosvector: bit_vector(size-1 downto 0);
 begin
-    j_cin <= '1' when (S(1 downto 0) = "11" or S = "0110" or S="1010" or S="1110") else '0';
+    j_cin <= '1' when S(2) = '1' else '1' when S(3) = '1' else '0';
     alu_0: alu1bit port map(a=>A(0), b=>B(0), less=>set_vector(size-1), cin=>j_cin, result=>z_f(0), cout=>cout_vector(0), set=>set_vector(0), overflow=>overflow_vector(0), ainvert=>S(3), binvert=>S(2), operation=>S(1 downto 0));
     F(0) <= z_f(0);
     alu_gen: for i in 1 to size-1 generate
@@ -39,5 +40,6 @@ begin
     end generate alu_gen;
     Ov <= overflow_vector(size-1);
     Co <= cout_vector(size-1);
-    Z <= '0'; --when unsigned(z_f) = 0 else '1';
+    zerosvector <= (others =>'0');
+    Z <= '1' when z_f = zerosvector else '0';
 end alu_arch;
