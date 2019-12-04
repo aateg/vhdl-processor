@@ -15,17 +15,15 @@ entity reg is
 end reg;
 
 architecture reg_arch of reg is
-    --signal q_n: bit_vector(wordSize-1 downto 0);
-    -- precisa do q_n ?
 begin
     clkr: process(clock, reset)
     begin
         if reset = '1' then
             q <= (others => '0');
-            --q_n <= not q;
-        elsif load = '1' and clock = '1' and clock'event then
-            q <= d;
-            --q_n <= not d;
+        elsif clock = '1' and clock'event then
+            if load = '1' then
+                q <= d;
+            end if;
         end if;
     end process clkr;
 end architecture reg_arch;
